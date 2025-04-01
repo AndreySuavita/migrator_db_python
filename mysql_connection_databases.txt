@@ -1,0 +1,34 @@
+midb_main = mysql.connector.connect(
+    host=DB_HOST_,
+    user=DB_USER_,
+    password=DB_PASSWORD_,
+    database=DB_NAME_
+) # Main DataBase
+
+midb_main_secundary = mysql.connector.connect(
+        host=DB_HOST_,
+        user=DB_USER_,
+        password=DB_PASSWORD_,
+        database=SUB_DB_NAME_
+    ) # Main DataBase subtables
+
+midb_second = mysql.connector.connect(
+    host=DB_HOST_LOCAL_,
+    user=DB_USER_LOCAL_,
+    password=DB_PASSWORD_LOCAL_,
+    database=DB_NAME_LOCAL_
+) # Secundary DataBase
+
+
+cursor_1 = midb_main.cursor()
+cursor_1_secundary = midb_main_secundary.cursor()
+cursor_2 = midb_second.cursor()
+
+""" Close connection """
+cursor_1.close()
+cursor_1_secundary.close()
+cursor_2.close()
+
+midb_main.close()
+midb_main_secundary.close()
+midb_second.close()
