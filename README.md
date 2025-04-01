@@ -1,4 +1,4 @@
-Here you can find a guide to migrate the DB PE_AWS to your local PC. You only need to install MySQL Workbench and MySQL. Additionally, you need to install Python version 3.12 or later.
+Here you can find a guide to migrate the DB in MySql to your local PC or to another location.  Additionally, you need to install Python version 3.12 or later.
 
 1. To activate the migrator, you need to install the following libraries:
 
